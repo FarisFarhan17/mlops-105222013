@@ -84,3 +84,48 @@ Dataset ini memiliki total 891 baris data dan 12 kolom, yang berisi informasi te
 ![MLflow UI](assets/2_2.png)
 3.
 ![MLflow UI](assets/2_3.png)
+
+## Task 3: Perbandingan Model dengan Dataset Titanic
+1.
+![MLflow UI](assets/3_1.png)
+2.
+![MLflow UI](assets/3_2.png)
+3.
+![MLflow UI](assets/3_3.png)
+4. 
+![MLflow UI](assets/3_4.png)
+
+### Hasil Performa Model
+
+- **Logistic Regression**:
+  - **Akurasi**: 80,45%
+  - **AUC**: 0,8768
+  - **Durasi Pelatihan**: 20,1 detik
+
+- **Random Forest**:
+  - **Akurasi**: 81,01%
+  - **AUC**: 0,8955
+  - **Durasi Pelatihan**: 8,3 detik
+
+- **Neural Network**:
+  - **Akurasi**: 80,45%
+  - **AUC**: 0,8506
+  - **Durasi Pelatihan**: 6,5 detik
+
+### Hasil Perbandingan Model dan Analisis Kinerja
+
+#### Akurasi
+- **Random Forest** menampilkan akurasi tertinggi dengan **81,0%**, menunjukkan sedikit keunggulan dibandingkan **Logistic Regression** dan **Neural Network**, yang memiliki akurasi **80,4%**.
+- Akurasi yang sedikit lebih tinggi dari Random Forest menunjukkan bahwa model ini lebih dapat diandalkan untuk prediksi yang benar dibandingkan dua model lainnya.
+
+#### AUC (Area Under the Curve)
+- **Random Forest** unggul dalam hal AUC, dengan skor **0,8955**, menandakan kemampuan yang lebih baik dalam membedakan antara kelas yang bertahan hidup dan tidak bertahan hidup.
+- **Logistic Regression** memiliki AUC **0,8768**, yang masih cukup baik, meskipun tidak sebaik Random Forest.
+- **Neural Network** mencatatkan AUC terendah, **0,8506**, yang menunjukkan performa yang baik tetapi kurang efektif dalam membedakan kelas dibandingkan dua model lainnya.
+
+#### Durasi Pelatihan
+- **Neural Network** membutuhkan waktu pelatihan tercepat, yaitu **6,5 detik**, diikuti oleh **Random Forest** dengan **8,3 detik**.
+- **Logistic Regression** memerlukan waktu paling lama, **20,1 detik**, karena proses iteratifnya yang lebih kompleks untuk mencapai konvergensi.
+
+### Kesimpulan
+**Random Forest** menunjukkan performa terbaik dalam hal akurasi dan AUC, membuatnya menjadi pilihan yang paling optimal untuk dataset Titanic ini. Meskipun **Logistic Regression** dan **Neural Network** memberikan hasil yang kompetitif, durasi pelatihan yang lebih lama pada Logistic Regression dan AUC yang lebih rendah pada Neural Network menjadikan mereka pilihan yang kurang optimal dalam konteks ini.
