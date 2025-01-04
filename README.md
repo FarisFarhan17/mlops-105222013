@@ -8,7 +8,7 @@ Proyek ini melibatkan pelatihan dan logging dua model machine learning, yaitu **
 a. Logistic Regression
 ![MLflow UI](assets/1_2.png)
 b. Random Forrest
-![MLflow UI](assets/l_3.png)
+![MLflow UI](assets/1_3.png)
 ### 1. **Evaluasi Accuracy dan AUC Score**
 
 - **Accuracy**:
