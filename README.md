@@ -79,8 +79,8 @@ Dataset ini memiliki total 891 baris data dan 12 kolom, yang berisi informasi te
 
 #### Screenshot 
 1.
-  ![MLflow UI](assets/2_1.png)
+![MLflow UI](assets/2_1.png)
 2.
-  ![MLflow UI](assets/2_2.png)
+![MLflow UI](assets/2_2.png)
 3.
-  ![MLflow UI](assets/2_3.png)
+![MLflow UI](assets/2_3.png)
