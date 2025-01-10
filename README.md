@@ -3,12 +3,15 @@
 ## Task 1
 
 ![MLflow UI](assets/1_1.png)
+
 Proyek ini melibatkan pelatihan dan logging dua model machine learning, yaitu **Random Forest** dan **Logistic Regression**, menggunakan dataset churn. Kita akan menganalisis performa kedua model berdasarkan tiga aspek utama: evaluasi akurasi dan AUC score, parameter model, dan metadata run.
 
 ### a. Logistic Regression
+
 ![MLflow UI](assets/1_2.png)
 
 ### b. Random Forest
+
 ![MLflow UI](assets/1_3.png)
 
 ### 1. **Evaluasi Accuracy dan AUC Score**
@@ -78,20 +81,27 @@ Dataset ini berisi informasi tentang penumpang Titanic, yang terdiri dari bebera
 Dataset ini memiliki total 891 baris data dan 12 kolom, yang berisi informasi tentang penumpang dan apakah mereka selamat atau tidak. Beberapa kolom seperti `Age` dan `Cabin` memiliki nilai yang hilang, sehingga penanganan data yang hilang diperlukan dalam analisis lebih lanjut.
 
 #### Screenshot 
+
 1.
 ![MLflow UI](assets/2_1.png)
+
 2.
 ![MLflow UI](assets/2_2.png)
+
 3.
 ![MLflow UI](assets/2_3.png)
 
 ## Task 3: Perbandingan Model dengan Dataset Titanic
+
 1.
 ![MLflow UI](assets/3_1.png)
+
 2.
 ![MLflow UI](assets/3_2.png)
+
 3.
 ![MLflow UI](assets/3_3.png)
+
 4. 
 ![MLflow UI](assets/3_4.png)
 
@@ -129,3 +139,45 @@ Dataset ini memiliki total 891 baris data dan 12 kolom, yang berisi informasi te
 
 ### Kesimpulan
 **Random Forest** menunjukkan performa terbaik dalam hal akurasi dan AUC, membuatnya menjadi pilihan yang paling optimal untuk dataset Titanic ini. Meskipun **Logistic Regression** dan **Neural Network** memberikan hasil yang kompetitif, durasi pelatihan yang lebih lama pada Logistic Regression dan AUC yang lebih rendah pada Neural Network menjadikan mereka pilihan yang kurang optimal dalam konteks ini.
+
+## Task 4: Analisis Deteksi Drift
+
+### Screenshot
+
+1.
+![MLflow UI](assets/done.png)
+
+2.
+![MLflow UI](assets/4_1.png)
+
+3.
+![MLflow UI](assets/4_2.png)
+
+4. 
+![MLflow UI](assets/4_3.1.png)
+![MLflow UI](assets/4_3.2.png)
+![MLflow UI](assets/4_3.3.png)
+![MLflow UI](assets/4_4.png)
+
+Pada eksperimen ini, dilakukan deteksi drift pada tiga fitur dari dataset Titanic, yaitu `Age`, `Fare`, dan `Pclass`. Drift dapat mengindikasikan perubahan signifikan pada distribusi data antara dataset pelatihan dan dataset pengujian yang dapat mempengaruhi performa model. Berdasarkan hasil perhitungan **Population Stability Index (PSI)**, berikut adalah analisis deteksi drift untuk masing-masing fitur:
+
+### 1. Hasil Deteksi Drift Fitur
+
+#### **a. Age (Usia)**
+- **PSI**: 0.0417
+- **Status Drift**: **Tidak ada drift**
+
+Fitur `Age` menunjukkan nilai PSI sebesar **0.0417**, yang jauh di bawah batas nilai PSI 0.1. Nilai PSI yang rendah ini mengindikasikan bahwa distribusi data `Age` pada dataset pelatihan dan pengujian sangat mirip dan tidak mengalami perubahan signifikan. Hal ini menunjukkan bahwa fitur `Age` tetap stabil dan tidak mengalami drift antara data pelatihan dan data uji, sehingga model yang menggunakan fitur ini kemungkinan besar akan tetap stabil di masa depan.
+
+#### **b. Fare (Tarif)**
+- **PSI**: 0.0217
+- **Status Drift**: **Tidak ada drift**
+
+Fitur `Fare` juga menunjukkan nilai PSI yang sangat rendah, yaitu **0.0217**. Ini menandakan bahwa distribusi nilai `Fare` pada dataset pelatihan dan dataset pengujian tetap konsisten dan tidak menunjukkan adanya pergeseran signifikan. Dengan kata lain, tidak ada perubahan distribusi yang cukup besar yang dapat mempengaruhi performa model dalam menggunakan fitur `Fare`. Model dapat terus mengandalkan fitur ini dengan keyakinan bahwa distribusinya tetap stabil.
+
+#### **c. Pclass (Kelas Penumpang)**
+- **PSI**: 0.0036
+- **Status Drift**: **Tidak ada drift**
+
+Fitur `Pclass` yang menggambarkan kelas penumpang (1, 2, atau 3) memiliki nilai PSI terendah, yaitu **0.0036**. Nilai ini jauh di bawah batas 0.1 dan menunjukkan bahwa distribusi data pada fitur ini juga sangat stabil antara dataset pelatihan dan pengujian. Karena `Pclass` adalah fitur kategorikal dengan sedikit nilai unik, perbedaan distribusi antara pelatihan dan pengujian
+
