@@ -1,6 +1,14 @@
-# MLFlow Task Report
+# MLFlow Task Report - Faris Farhan (105222013)
 
-## Task 1
+## Task 1: Environment Setup
+a.
+![MLflow UI](assets/start_ss.png)
+b.
+![MLflow UI](assets/requirements_ss.png)
+
+---
+
+## Task 2: Synthetic Data Results
 
 ![MLflow UI](assets/1_1.png)
 
@@ -60,7 +68,7 @@ Logistic Regression menunjukkan keunggulan dalam kecepatan pelatihan dan AUC yan
 
 ---
 
-## Task 2: Dataset Logging with Your Own Data
+## Task 2: Dataset Documentation
 
 ### Titanic Dataset Logging with MLflow
 
@@ -91,7 +99,9 @@ Dataset ini memiliki total 891 baris data dan 12 kolom, yang berisi informasi te
 3.
 ![MLflow UI](assets/2_3.png)
 
-## Task 3: Perbandingan Model dengan Dataset Titanic
+---
+
+## Task 3: Custom Dataset Results
 
 1.
 ![MLflow UI](assets/3_1.png)
@@ -140,7 +150,9 @@ Dataset ini memiliki total 891 baris data dan 12 kolom, yang berisi informasi te
 ### Kesimpulan
 **Random Forest** menunjukkan performa terbaik dalam hal akurasi dan AUC, membuatnya menjadi pilihan yang paling optimal untuk dataset Titanic ini. Meskipun **Logistic Regression** dan **Neural Network** memberikan hasil yang kompetitif, durasi pelatihan yang lebih lama pada Logistic Regression dan AUC yang lebih rendah pada Neural Network menjadikan mereka pilihan yang kurang optimal dalam konteks ini.
 
-## Task 4: Analisis Deteksi Drift
+---
+
+## Task 4: Drift Detection
 
 ### Screenshot
 
